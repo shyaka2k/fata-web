@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const WelcomeFooter = () => {
   return (
-    <footer className="bg-gray-900 text-white mt-20 relative overflow-hidden">
+  <footer className="bg-gray-900 text-white mt-12 relative overflow-hidden w-full">
       <motion.div
-        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -69,7 +69,7 @@ const WelcomeFooter = () => {
 
       {/* Bottom Bar */}
       <motion.div
-        className="text-center text-xs sm:text-sm text-gray-500 border-t border-gray-700 py-4 px-4"
+        className="text-center text-xs sm:text-sm text-gray-500 border-t border-gray-700 py-3 px-2 sm:px-4 w-full"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}

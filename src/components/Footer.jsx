@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-900 text-white py-8 mt-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <footer className="bg-green-900 text-white py-8 mt-12 w-full">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
         {/* Quick Links */}
         <div>
           <h4 className="font-bold mb-3 text-lg">Quick Links</h4>
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="text-center mt-6 text-xs sm:text-sm text-gray-300 px-4">
+  <div className="text-center mt-6 text-xs sm:text-sm text-gray-300 px-2 sm:px-4 w-full">
         © {new Date().getFullYear()} Forum of African Traditional Authorities (FATA). All rights reserved.
       </div>
     </footer>

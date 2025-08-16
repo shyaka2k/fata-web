@@ -40,15 +40,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-green-900 text-white p-4 shadow-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+    <nav className="bg-green-900 text-white p-4 shadow-md sticky top-0 z-50 w-full">
+      <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between w-full">
         {/* Logo */}
         <span className="text-xl font-bold hover:text-yellow-400 transition cursor-default">
           FATA
         </span>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex space-x-4 flex-grow justify-center">
+  <div className="hidden md:flex flex-wrap space-x-2 sm:space-x-4 flex-grow justify-center">
           {navLinks.map((link) => (
             <Link key={link.to} to={link.to} className={linkClasses}>
               {link.label}
@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Hamburger for mobile */}
         <button
-          className="block md:hidden p-2 rounded bg-green-800 hover:bg-green-700"
+          className="block md:hidden p-2 rounded bg-green-800 hover:bg-green-700 focus:outline-none"
           onClick={() => setMobileNavOpen(!mobileNavOpen)}
         >
           <svg
@@ -77,7 +77,7 @@ const Navbar = () => {
         </button>
 
         {/* User Icon */}
-        <div className="relative hidden md:block" ref={dropdownRef}>
+  <div className="relative hidden md:block" ref={dropdownRef}>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="User menu"
@@ -118,7 +118,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileNavOpen && (
-        <div className="md:hidden mt-4 space-y-2">
+        <div className="md:hidden mt-4 space-y-2 px-2 pb-2 w-full">
           {navLinks.map((link) => (
             <Link
               key={link.to}

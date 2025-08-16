@@ -9,14 +9,14 @@ const WelcomeNavbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="flex justify-between items-center px-4 sm:px-6 py-4 bg-gradient-to-r from-blue-300 to-green-300 shadow-lg sticky top-0 z-50 transition duration-300 hover:shadow-xl">
+  <nav className="flex flex-wrap justify-between items-center px-2 sm:px-4 py-3 sm:py-4 bg-gradient-to-r from-blue-300 to-green-300 shadow-lg sticky top-0 z-50 transition duration-300 hover:shadow-xl w-full">
         {/* Logo */}
-        <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-white">
+  <h2 className="text-lg sm:text-xl md:text-2xl font-extrabold tracking-wide text-white">
           FATA
         </h2>
 
         {/* Sliding Words - hidden on very small screens */}
-        <div className="hidden sm:block overflow-hidden max-w-xs md:max-w-md mx-4">
+  <div className="hidden sm:block overflow-hidden max-w-[120px] sm:max-w-xs md:max-w-md mx-2 sm:mx-4">
           <motion.div
             className="text-white font-extrabold text-lg md:text-2xl tracking-wide whitespace-nowrap"
             animate={{ x: ["100%", "-100%"] }}
@@ -27,7 +27,7 @@ const WelcomeNavbar = () => {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden sm:flex space-x-4 items-center">
+  <div className="hidden sm:flex flex-wrap space-x-2 md:space-x-4 items-center">
           <Link to="/signup">
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -49,7 +49,7 @@ const WelcomeNavbar = () => {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="sm:hidden flex items-center">
+  <div className="sm:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-white text-2xl focus:outline-none"
@@ -65,7 +65,7 @@ const WelcomeNavbar = () => {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
-          className="bg-gradient-to-r from-blue-200 to-green-200 sm:hidden px-4 py-4 space-y-3 shadow-lg"
+          className="bg-gradient-to-r from-blue-200 to-green-200 sm:hidden px-2 py-3 space-y-2 shadow-lg w-full"
         >
           <Link
             to="/signup"
@@ -85,7 +85,7 @@ const WelcomeNavbar = () => {
       )}
 
       {/* Short Stats Navbar */}
-      <div className="bg-white shadow-md py-3 px-4 sm:px-6 flex flex-col sm:flex-row justify-around items-center sticky top-[64px] z-40 space-y-3 sm:space-y-0">
+  <div className="bg-white shadow-md py-2 px-2 sm:px-4 flex flex-col sm:flex-row justify-around items-center sticky top-[56px] z-40 space-y-2 sm:space-y-0 w-full">
         <div className="text-center">
           <p className="text-gray-700 font-bold text-base sm:text-lg">75%</p>
           <p className="text-gray-500 text-xs sm:text-sm">
