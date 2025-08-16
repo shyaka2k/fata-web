@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-green-900 text-white py-8 mt-12">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {/* Quick Links */}
         <div>
-          <h4 className="font-bold mb-2">Quick Links</h4>
-          <ul>
+          <h4 className="font-bold mb-3 text-lg">Quick Links</h4>
+          <ul className="space-y-1">
             <li><Link to="/" className="hover:underline">Home</Link></li>
             <li><Link to="/about" className="hover:underline">About Us</Link></li>
             <li><Link to="/leadership" className="hover:underline">Leadership</Link></li>
@@ -21,31 +21,34 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h4 className="font-bold mb-2">Contact</h4>
-          <p>President: HRH Drani Izakare - +256782201280</p>
-          <p>Secretary General: HRH Chief Ishima - +260977825941</p>
-          <p>Admin/Treasurer: HRH Brook Temesgen - +251923125050</p>
-          <p>Email: <a href="mailto:brooksewt@gmail.com" className="underline">brooksewt@gmail.com</a></p>
+          <h4 className="font-bold mb-3 text-lg">Contact</h4>
+          <p className="text-sm">President: HRH Drani Izakare - <a href="tel:+256782201280" className="underline">+256 782 201 280</a></p>
+          <p className="text-sm">Secretary General: HRH Chief Ishima - <a href="tel:+260977825941" className="underline">+260 977 825 941</a></p>
+          <p className="text-sm">Admin/Treasurer: HRH Brook Temesgen - <a href="tel:+251923125050" className="underline">+251 923 125 050</a></p>
+          <p className="text-sm">
+            Email: <a href="mailto:brooksewt@gmail.com" className="underline">brooksewt@gmail.com</a>
+          </p>
         </div>
 
         {/* Newsletter */}
         <div>
-          <h4 className="font-bold mb-2">Newsletter</h4>
-          <p>Sign up to receive updates and news.</p>
-          <form className="mt-2 flex flex-col">
+          <h4 className="font-bold mb-3 text-lg">Newsletter</h4>
+          <p className="text-sm">Sign up to receive updates and news.</p>
+          <form className="mt-3 flex flex-col sm:flex-row sm:items-center sm:space-x-2">
             <input
               type="email"
               placeholder="Enter your email"
-              className="p-2 rounded text-black mb-2"
+              className="p-2 rounded text-black flex-1 mb-2 sm:mb-0"
             />
-            <button className="bg-green-600 hover:bg-green-700 p-2 rounded font-semibold">
+            <button className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded font-semibold text-sm">
               Subscribe
             </button>
           </form>
         </div>
       </div>
 
-      <div className="text-center mt-6 text-sm text-gray-300">
+      {/* Bottom Section */}
+      <div className="text-center mt-6 text-xs sm:text-sm text-gray-300 px-4">
         © {new Date().getFullYear()} Forum of African Traditional Authorities (FATA). All rights reserved.
       </div>
     </footer>

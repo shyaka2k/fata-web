@@ -8,6 +8,7 @@ import MainLayout from "./layouts/MainLayout";
 // Pages
 import Welcome from "./pages/Welcome";
 import Home from "./pages/Home";
+import RequireAuth from "./components/RequireAuth";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -20,6 +21,17 @@ import Donation from "./pages/Donation";
 import NewsMedia from "./pages/NewsMedia";
 import Contact from "./pages/Contact";
 import Settings from "./pages/Settings"; // <-- Added Settings import
+import Account from "./pages/Account";
+        <Route
+          path="/account"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <Account />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
 
 function App() {
   return (
@@ -34,6 +46,96 @@ function App() {
             </WelcomeLayout>
           }
         />
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <Dashboard />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <About />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/leadership"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <Leadership />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/activities"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <Activities />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/events"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <Events />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/get-involved"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <GetInvolved />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/donation"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <Donation />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/news-media"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <NewsMedia />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <RequireAuth>
+              <MainLayout>
+                <Contact />
+              </MainLayout>
+            </RequireAuth>
+          }
+        />
 
         {/* Signup and Login WITHOUT layout (no navbar/footer) */}
         <Route path="/signup" element={<Signup />} />
@@ -43,81 +145,101 @@ function App() {
         <Route
           path="/home"
           element={
-            <MainLayout>
-              <Home />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Home />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/dashboard"
           element={
-            <MainLayout>
-              <Dashboard />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Dashboard />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/about"
           element={
-            <MainLayout>
-              <About />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <About />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/leadership"
           element={
-            <MainLayout>
-              <Leadership />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Leadership />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/activities"
           element={
-            <MainLayout>
-              <Activities />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Activities />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/events"
           element={
-            <MainLayout>
-              <Events />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Events />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/get-involved"
           element={
-            <MainLayout>
-              <GetInvolved />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <GetInvolved />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/donation"
           element={
-            <MainLayout>
-              <Donation />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Donation />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/news-media"
           element={
-            <MainLayout>
-              <NewsMedia />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <NewsMedia />
+              </MainLayout>
+            </RequireAuth>
           }
         />
         <Route
           path="/contact"
           element={
-            <MainLayout>
-              <Contact />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Contact />
+              </MainLayout>
+            </RequireAuth>
           }
         />
 
@@ -125,9 +247,11 @@ function App() {
         <Route
           path="/settings"
           element={
-            <MainLayout>
-              <Settings />
-            </MainLayout>
+            <RequireAuth>
+              <MainLayout>
+                <Settings />
+              </MainLayout>
+            </RequireAuth>
           }
         />
       </Routes>

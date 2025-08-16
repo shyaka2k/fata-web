@@ -13,13 +13,16 @@ const Donation = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Support FATA</h2>
+        <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">
+          Support FATA
+        </h2>
 
         {/* Why Donate */}
         <section className="mb-12">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Why Donate?</h3>
           <p className="text-gray-700">
-            Your contribution helps FATA promote peace, preserve cultural heritage, foster community development, and empower youth across Africa.
+            Your contribution helps FATA promote peace, preserve cultural heritage,
+            foster community development, and empower youth across Africa.
           </p>
         </section>
 
@@ -36,9 +39,13 @@ const Donation = () => {
 
         {/* Donation Form */}
         <section className="bg-white rounded-lg shadow p-6 mb-12 max-w-md mx-auto">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">Make a Donation</h3>
+          <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+            Make a Donation
+          </h3>
           {donated ? (
-            <p className="text-green-600 text-center font-medium">🎉 Thank you for your generous support!</p>
+            <p className="text-green-600 text-center font-medium">
+              🎉 Thank you for your generous support!
+            </p>
           ) : (
             <form onSubmit={handleDonate} className="flex flex-col space-y-4">
               <input
@@ -81,7 +88,10 @@ const Donation = () => {
         {/* Contact for Donations */}
         <section className="text-center">
           <p className="text-gray-700">
-            For donation inquiries, contact us at <a href="mailto:brooksewt@gmail.com" className="text-blue-600 hover:underline">brooksewt@gmail.com</a>.
+            For donation inquiries, contact us at{" "}
+            <a href="mailto:brooksewt@gmail.com" className="text-blue-600 hover:underline">
+              brooksewt@gmail.com
+            </a>.
           </p>
         </section>
       </div>
